@@ -13,7 +13,7 @@ class Listas extends mysqli {
         return $query;
     }
     public function search($texto){
-        $consulta = "SELECT * FROM listas WHERE nombre like '%$texto%'";
+        $consulta = "SELECT * FROM listas WHERE titulo like '%$texto%'";
         $query = $this->query($consulta);
         return $query;
     }

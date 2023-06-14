@@ -1,0 +1,23 @@
+body {
+    background-color: rgba(0, 255, 140, 0.161);
+}
+
+.bg {
+    background-image: url(../img/base_datos.jpg);
+    background-position: center center ;
+ 
+}
+
+.bad {
+	text-align: center;
+	width: 100%;
+	padding: 12px;
+	background-color: #a22;
+	color: #fff
+}
+
+h1 {
+	text-align: center;
+	padding: 12px;
+	color: rgb(206, 203, 203)
+}

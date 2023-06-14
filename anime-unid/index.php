@@ -25,7 +25,7 @@
                         <input type="submit" name="search" value="🔍">
                     </form>
                 </div>
-                <a href="#" class="login">Login</a>
+                <a href="login/login.php" class="login">Login</a>
             </nav>
         </div>
     </header>
@@ -34,6 +34,7 @@
         <div class="episodes">
             <?php
             require_once 'config/class-video.php';
+            require_once 'config\Class-Listas.php';
             $videos = new Video("localhost", "root", "", "reproductor_proyecto");
 
             // if (isset($_POST['search'])) {
@@ -67,7 +68,6 @@
         <h2>Últimos animes agregados</h2>
         <div class="episodes">
             <?php
-            require_once 'config\Class-Listas.php';
             $listas = new listas("localhost", "root", "", "reproductor_proyecto");
             $result = (isset($_POST['search'])) ? 
             $listas->search($_POST['texto']) :
@@ -80,7 +80,7 @@
                     <img src="<?php echo $row['thumbnail']; ?>" alt="">
                     <div class="episode_description">
                         <p class="episode_number"> <?php echo $row['categoria']; ?>"</p>
-                        <h3 class="episode_title"><?php echo $row['nombre']; ?>"</h3>
+                        <h3 class="episode_title"><?php echo $row['titulo']; ?>"</h3>
                     </div>
                 </div>
             <?php
